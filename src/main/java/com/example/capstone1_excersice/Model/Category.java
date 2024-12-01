@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Integer id;
     @NotEmpty(message = "Error: name is empty")
     @Size(min = 3 , message = "Error: name length must is more then 3")
     @Column(columnDefinition = "varchar(25) not null")

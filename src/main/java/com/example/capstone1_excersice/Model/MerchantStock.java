@@ -19,7 +19,7 @@ public class MerchantStock {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Integer id;
     @NotEmpty(message = "Error: productId is empty")
     @Column(columnDefinition = "int not null")
     private Integer productId;

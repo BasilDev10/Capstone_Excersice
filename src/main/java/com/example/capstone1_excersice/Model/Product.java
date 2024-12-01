@@ -14,14 +14,14 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Integer id;
     @NotEmpty(message = "Error: name is empty")
     @Size(min = 3 , message = "Error: name length must is more then 3")
     @Column(columnDefinition = "varchar(25) not null")
     private String name;
     @NotNull(message = "Error: price is null")
     @Positive(message = "Error: price is must be positive")
-    @Column(columnDefinition = "double not null")
+    @Column(columnDefinition = "float not null")
     private Double price;
     @NotEmpty(message = "Error: categoryId is empty")
     @Column(columnDefinition = "int not null")
